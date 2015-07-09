@@ -5,5 +5,5 @@ Symfony2 Bundle - An extension of [SonataTimelineBundle](https://github.com/sona
 
 Uses a forked version of SonataTimelineBundle
 
-**STABLE VERSION**
+**DEVELOPMENT VERSION**
 
