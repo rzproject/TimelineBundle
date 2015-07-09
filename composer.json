@@ -13,14 +13,14 @@
         }
     ],
     "require": {
-        "rmzamora/timeline-bundle": "2.4.*"
+        "rmzamora/timeline-bundle": "2.4.1.*"
     },
     "autoload": {
         "psr-4": { "Rz\\TimelineBundle\\": "" }
     },
     "extra": {
         "branch-alias": {
-            "dev-1.1": "1.1.x-dev"
+            "dev-1.1.0": "1.1.0.x-dev"
         }
     }
 }
