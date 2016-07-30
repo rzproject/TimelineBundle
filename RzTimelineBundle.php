@@ -3,14 +3,16 @@
 namespace Rz\TimelineBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Rz\TimelineBundle\DependencyInjection\Compiler\OverrideServiceCompilerPass;
 
 class RzTimelineBundle extends Bundle
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
-    public function getParent()
+    public function build(ContainerBuilder $container)
     {
-        return 'SonataTimelineBundle';
+        $container->addCompilerPass(new OverrideServiceCompilerPass());
     }
 }

@@ -61,7 +61,7 @@
             </div>
         </div>
 	    <div class="box-footer">
-		    <a href="#" class="btn btn-primary pull-right"><i class="fa fa-list"></i> {{ 'view_all_timeline'|trans({}, 'SonataTimelineBundle') }}</a>
+		    <a href="{{ admin_pool.getAdminByAdminCode('rz.timeline.admin.timeline').generateUrl('timeline') }}" class="btn btn-primary pull-right"><i class="fa fa-list"></i> {{ 'view_all_timeline'|trans({}, 'SonataTimelineBundle') }}</a>
 	    </div>
     </div>
 {% endblock %}
