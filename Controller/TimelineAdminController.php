@@ -20,7 +20,6 @@ class TimelineAdminController extends CRUDController
      */
     public function timelineAction(Request $request = null)
     {
-
         $token = $this->get('security.token_storage')->getToken();
         if (!$token) {
             throw $this->createNotFoundException('No User Token');
