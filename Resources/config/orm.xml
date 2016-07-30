@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="rz.timeline.entity.manager.timeline.class">Rz\TimelineBundle\Entity\TimelineManager</parameter>
+        <parameter key="rz.timeline.entity.manager.action.class">Rz\TimelineBundle\Entity\ActionManager</parameter>
+        <parameter key="rz.timeline.entity.manager.action_component.class">Rz\TimelineBundle\Entity\ActionComponentManager</parameter>
+        <parameter key="rz.timeline.entity.manager.component.class">Rz\TimelineBundle\Entity\ComponentManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="rz.timeline.manager.timeline" class="%rz.timeline.entity.manager.timeline.class%">
+            <argument>%rz.timeline.timeline.entity%</argument>
+            <argument type="service" id="doctrine" />
+        </service>
+
+        <service id="rz.timeline.manager.action" class="%rz.timeline.entity.manager.action.class%">
+            <argument>%rz.timeline.action.entity%</argument>
+            <argument type="service" id="doctrine" />
+        </service>
+
+        <service id="rz.timeline.manager.action_component" class="%rz.timeline.entity.manager.action_component.class%">
+            <argument>%rz.timeline.action_component.entity%</argument>
+            <argument type="service" id="doctrine" />
+        </service>
+
+        <service id="rz.timeline.manager.component" class="%rz.timeline.entity.manager.component.class%">
+            <argument>%rz.timeline.component.entity%</argument>
+            <argument type="service" id="doctrine" />
+        </service>
+    </services>
+</container>

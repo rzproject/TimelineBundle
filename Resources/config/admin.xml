@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="rz.timeline.admin.timeline.class">Rz\TimelineBundle\Admin\TimelineAdmin</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="rz.timeline.admin.timeline" class="%rz.timeline.admin.timeline.class%">
+            <tag name="sonata.admin" manager_type="orm" group="timeline" label="label_timeline"  show_in_dashboard="false" label_catalogue="%rz.timeline.admin.timeline.translation_domain%" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%rz.timeline.admin.timeline.entity%</argument>
+            <argument>%rz.timeline.admin.timeline.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%rz.timeline.admin.timeline.translation_domain%</argument>
+            </call>
+        </service>
+
+    </services>
+
+</container>

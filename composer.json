@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "rmzamora/timeline-bundle": "2.5.0.*"
+        "rmzamora/timeline-bundle": "2.5.0.*",
+        "rz/core-bundle": "2.0.0.*"
     },
     "autoload": {
         "psr-4": { "Rz\\TimelineBundle\\": "" }
